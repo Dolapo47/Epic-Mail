@@ -1,4 +1,4 @@
-let tidy = () => {
+let signUp = () => {
     const userName = document.getElementById('uname').value.trim();
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value;
@@ -17,8 +17,26 @@ let tidy = () => {
     }else if(emailRegex.test(email)  === false){
         output.innerHTML = 'Invalid email input';
         return false;
-    }else{
+    }
+    else{
         window.location = 'signin.html';
+    }
+
+}
+
+let signIn = () => {
+    const userName = document.getElementById('uname').value.trim();
+    const pwd = document.getElementById('password').value;
+    let output = document.getElementById('output');
+    str = userName.slice(0, 1);
+    if(!userName || !password){
+        output.innerHTML = 'Fill the empty fields';
+        return false;
+    }else if (regex.test(str) === false){
+        output.innerHTML = "Username cannot begin with special characters or numbers"
+        return false;
+    }else{
+        window.location = 'dashboard.html';
     }
 
 }
