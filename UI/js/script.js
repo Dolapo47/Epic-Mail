@@ -27,9 +27,10 @@ let signUp = () => {
 let signIn = () => {
     const userName = document.getElementById('uname').value.trim();
     const pwd = document.getElementById('password').value;
+    const regex = /^[a-zA-Z]+/;
     let output = document.getElementById('output');
     str = userName.slice(0, 1);
-    if(!userName || !password){
+    if(!userName || !pwd){
         output.innerHTML = 'Fill the empty fields';
         return false;
     }else if (regex.test(str) === false){
