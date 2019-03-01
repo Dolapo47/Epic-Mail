@@ -29,7 +29,7 @@ let signIn = () => {
     const pwd = document.getElementById('password').value;
     const regex = /^[a-zA-Z]+/;
     let output = document.getElementById('output');
-    str = userName.slice(0, 1);
+    let str = userName.slice(0, 1);
     if(!userName || !pwd){
         output.innerHTML = 'Fill the empty fields';
         return false;
@@ -40,4 +40,25 @@ let signIn = () => {
         window.location = 'dashboard.html';
     }
 
+}
+
+let reset = () => {
+    const pwd = document.getElementById('pwd').value;
+    const cpwd = document.getElementById('cpwd').value;
+    let str = userName.slice(0, 1);
+    console.log(pwd, cpwd);
+
+    // if(!userName || !email){
+    //     output.innerHTML = 'Fill the empty fields';
+    //     return false;
+    // }else if (regex.test(str) === false){
+    //     output.innerHTML = "Username cannot begin with special characters or numbers"
+    //     return false;
+    // }else if(emailRegex.test(email)  === false){
+    //     output.innerHTML = 'Invalid email input';
+    //     return false;
+    // }else{
+    //     window.location = 'notification.html'
+    // }
+    
 }
