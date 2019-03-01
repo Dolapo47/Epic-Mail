@@ -152,6 +152,38 @@ header a:hover {
     color: darkgrey;
 }
 
+#sidebar{
+    width: 300px;
+    height: 500px;
+    background:#35424a;
+    float: left;
+    border-right: 3px solid #e8491d;
+    color: #ffffff;
+}
+
+#data{
+    height: 500px;
+    background: #ffffff;
+}
+
+#adminlogo{
+    background: white;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    float: right;
+    margin-left: 10px;
+}
+
+ul li {
+    padding: 20px;
+    border-bottom: 2px solid gray;
+}
+ul li:hover {
+    background: gray;
+    color: white;
+}
+
 #output {
     height: 40px;
     margin: 0;
@@ -161,9 +193,9 @@ header a:hover {
 
 footer {
     padding: 20px;
-    border-top: #35424a 3px solid;
+    border-top: #e8491d 3px solid;
     margin-top: 0px;
-    background-color: #e8491d;
+    background-color: #35424a;
     text-align: center;
     color: #ffffff;
 

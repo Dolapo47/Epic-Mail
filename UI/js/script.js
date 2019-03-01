@@ -46,8 +46,6 @@ let reset = () => {
     const pwd = document.getElementById('pwd').value;
     const cpwd = document.getElementById('cpwd').value;
     let str = userName.slice(0, 1);
-    console.log(pwd, cpwd);
-
     // if(!userName || !email){
     //     output.innerHTML = 'Fill the empty fields';
     //     return false;
