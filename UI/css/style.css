@@ -161,6 +161,49 @@ header a:hover {
     color: #ffffff;
 }
 
+#sidebar h2 {
+    margin: 10px;
+    padding: 10px;
+    margin-bottom: 70px;
+}
+
+#sidebar-form {
+    margin: 30px 10px;
+    padding: 0;
+}
+
+#sidebar-form input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#sidebar-form input[type="text"], input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 20px;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+#sidebar input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #06fa94;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#sidebar input[type="submit"]:hover {
+    cursor: pointer;
+    background: #fb2525;
+    color: #000;
+}
+
 #data{
     height: 500px;
     background: #ffffff;
@@ -177,7 +220,12 @@ header a:hover {
 
 ul li {
     padding: 20px;
-    border-bottom: 2px solid gray;
+    border: 2px solid gray;
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 7px;
+    border-radius: 10px;
+
 }
 ul li:hover {
     background: gray;
