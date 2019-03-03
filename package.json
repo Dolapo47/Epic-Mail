@@ -1,0 +1,31 @@
+{
+  "name": "epic-mail",
+  "version": "1.0.0",
+  "description": "A mailing app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dolapo47/Epic-Mail.git"
+  },
+  "author": "Adedolapo Adeleye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dolapo47/Epic-Mail/issues"
+  },
+  "homepage": "https://github.com/Dolapo47/Epic-Mail#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.15.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "nodemon": "^1.18.10"
+  }
+}
