@@ -8,6 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false,
 }));
+
 app.use('/api/v1/auth', userRoutes);
 
 app.use((req, res, next) => {
