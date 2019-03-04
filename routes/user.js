@@ -6,7 +6,7 @@ import db from '../db/userDB';
 const router = express.Router();
 
 // eslint-disable-next-line consistent-return
-router.post('/signup', (req, res, next) => {
+router.post('/signup', (req, res) => {
   const hashedPassword = bcrypt.hashSync(req.body.password, 8);
   if (!req.body.email) {
     return res.status(400).send({
@@ -59,6 +59,22 @@ router.post('/signup', (req, res, next) => {
     user,
     auth: true,
     token,
+  });
+});
+
+router.post('/signin', (req, res) => {
+  db.map((user) => {
+    if (user.email === req.body.email) {
+      const passwordIsValid = bcrypt.compareSync(req.body.password, user.password);
+      if (!passwordIsValid) {
+        return res.status(401).send({ auth: false, token: null });
+      }
+      const token = jwt.sign({ email: user.email }, 'dolapo', {
+        expiresIn: 86400, // expires in 24 hours
+      });
+      res.status(200).send({ auth: true, token });
+    }
+    return user;
   });
 });
 
