@@ -11,7 +11,7 @@ router.post('/messages', (req, res) => {
     subject: req.body.subject,
     message: req.body.message,
     parentId: 1,
-    status: 'sent',
+    status: req.body.status,
   };
   messageDetails.push(message);
   res.status(201).json({
@@ -24,6 +24,14 @@ router.get('/messages', (req, res) => {
   res.status(200).json({
     status: 200,
     messages: messageDetails,
+  });
+});
+
+router.get('/messages/sent', (req, res) => {
+  const readMessages = messageDetails.filter(message => message.status === 'sent');
+  res.status(200).json({
+    status: 200,
+    readMessages,
   });
 });
 
