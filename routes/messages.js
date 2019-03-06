@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 import express from 'express';
 import { messageDetails } from '../db/userDB';
 
@@ -6,7 +7,7 @@ const router = express.Router();
 // eslint-disable-next-line consistent-return
 router.post('/messages', (req, res) => {
   const message = {
-    id: messageDetails.length + 1,
+    id: String(messageDetails.length + 1),
     createdOn: new Date(),
     subject: req.body.subject,
     message: req.body.message,
@@ -35,4 +36,19 @@ router.get('/messages/sent', (req, res) => {
   });
 });
 
-module.exports = router;
+router.get('/messages/:id', (req, res) => {
+  const { id } = req.params;
+  const messageId = messageDetails.filter(message => message.id === id);
+  if (!id) {
+    res.status(404).json({
+      success: false,
+      message: 'Message not found',
+    });
+  }
+  res.status(200).json({
+    status: 200,
+    messageId,
+  });
+});
+
+export default router;

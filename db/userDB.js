@@ -12,11 +12,11 @@ export const userDetails = [
 
 export const messageDetails = [
   {
-    id: 1,
+    id: '1',
     createdOn: new Date(),
     subject: 'Epic mail app',
     message: 'this is Epic mail app for andela',
-    parentMessageId: 1,
+    parentMessageId: '1',
     status: 'sent',
   },
 ];
