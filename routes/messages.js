@@ -44,11 +44,28 @@ router.get('/messages/:id', (req, res) => {
       success: false,
       message: 'Message not found',
     });
+  } else {
+    res.status(200).json({
+      status: 200,
+      messageId,
+    });
   }
-  res.status(200).json({
-    status: 200,
-    messageId,
-  });
 });
 
+router.delete('/messages/:id', (req, res) => {
+  const { id } = req.params;
+  const message = messageDetails.filter(messages => messages.id === id)[0];
+  const index = messageDetails.indexOf(message);
+  messageDetails.splice(index, 1);
+  if (!id) {
+    res.status(404).json({
+      success: false,
+      message: 'message not found',
+    });
+  } else {
+    res.status(202).json({
+      message: `Message ${id} deleted`,
+    });
+  }
+});
 export default router;
