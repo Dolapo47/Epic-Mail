@@ -39,6 +39,12 @@ router.get('/messages/sent', (req, res) => {
 router.get('/messages/:id', (req, res) => {
   const { id } = req.params;
   const messageId = messageDetails.filter(message => message.id === id);
+  if (!id) {
+    res.status(404).json({
+      success: false,
+      message: 'Message not found',
+    });
+  }
   res.status(200).json({
     status: 200,
     messageId,
