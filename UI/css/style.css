@@ -82,12 +82,13 @@ header a:hover {
 
 .loginbox {
     background: #35424a;
-    margin: 20px 20px;
+    margin: 19.5px 20px;
     border: 1px solid black;
     height: 420px;
-    width: 320px;
+    width: 400px;
     padding: 10px 10px;
     color: #ffffff;
+    margin-left: 33%;
 }
 
 .loginbox p {
@@ -154,7 +155,7 @@ header a:hover {
 
 #sidebar{
     width: 300px;
-    height: 500px;
+    height: 480px;
     background:#35424a;
     float: left;
     border-right: 3px solid #e8491d;
@@ -205,7 +206,7 @@ header a:hover {
 }
 
 #data{
-    height: 500px;
+    height: 480px;
     background: #ffffff;
 }
 
@@ -246,6 +247,6 @@ footer {
     background-color: #35424a;
     text-align: center;
     color: #ffffff;
-
+    height: 30px;
 }
 
