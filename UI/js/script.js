@@ -14,7 +14,7 @@ let signUp = () => {
   } if (regex.test(str) === false) {
     output.innerHTML = 'Username cannot begin with special characters or numbers';
     return false;
-  } if (emailRegex.test(email)  === false) {
+  } if (emailRegex.test(email) === false) {
     output.innerHTML = 'Invalid email input';
     return false;
   }
@@ -32,10 +32,10 @@ const signIn = () => {
     output.innerHTML = 'Fill the empty fields';
     return false;
   } if (regex.test(str) === false) {
-    output.innerHTML = "Username cannot begin with special characters or numbers"
+    output.innerHTML = 'Username cannot begin with special characters or numbers';
     return false;
   }
-  window.location = 'dashboard.html';
+  window.location = 'inbox.html';
   return window.location;
 };
 
@@ -54,5 +54,5 @@ let reset = () => {
   //     return false;
   // }else{
   //     window.location = 'notification.html'
-  // }   
-}
+  // }
+};
