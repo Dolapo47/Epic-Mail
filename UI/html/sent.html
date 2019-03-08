@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=, initial-scale=1.0"> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Epic Mail | Reset</title>
+    <title>Epic Mail | Admin</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/script.js">
    </script>
@@ -15,21 +15,25 @@
             <div id="branding">
                 <h1><span class="highlight">E</span>pic Mail</h1>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="message.html">Compose</a></li>
+                    <li><a href="inbox.html">Inbox</a></li>
+                    <li><a href="#">Sent</a></li>
+                    <li><a href="#">Draft</a></li>
+                    <li><a href="signin.html">Logout</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-    
-    <div class="loginbox">
-        <div class="container">
-                <h1>Reset Password</h1>
-                <form onsubmit="return signIn()" action="#" >
-                    <input type="text" name="" id="pwd" placeholder="New password...">
-                    <input type="text" name="" id="cpwd" placeholder="Confirm password...">
-                    <input type="submit" name="submit" value="Reset">
-                    <a href="signin.html">Go back to sign in</a>
-                </form>
+
+    <div id="dash-data">
+        <div id="dash-content">
+            <div id="message">
+                   
             </div>
-            <div id="output"></div>
         </div>
+    </div>
         
     
 

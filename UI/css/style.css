@@ -80,14 +80,21 @@ header a:hover {
     font-weight: bold;
 }
 
+.textarea h1{
+    margin: 10px 0 20px 0;
+    padding: 0;
+    font-weight: lighter;
+}
+
 .loginbox {
     background: #35424a;
-    margin: 20px 20px;
+    margin: 19.5px 20px;
     border: 1px solid black;
     height: 420px;
-    width: 320px;
+    width: 400px;
     padding: 10px 10px;
     color: #ffffff;
+    margin-left: 33%;
 }
 
 .loginbox p {
@@ -128,7 +135,7 @@ header a:hover {
     border-radius: 5px;
 }
 
-#button {
+/* #button {
     border: none;
     outline: none;
     height: 40px;
@@ -137,7 +144,7 @@ header a:hover {
     color: #fff;
     font-size: 18px;
     border-radius: 5px;
-}
+} */
 
 .loginbox input[type="submit"]:hover {
     cursor: pointer;
@@ -152,17 +159,116 @@ header a:hover {
     color: darkgrey;
 }
 
+#message {
+    position: absolute;
+    border-radius: 5px;
+    left: 13%;
+    background-color: #ffffff;
+    top: 7%;
+    width: 70%;
+    margin: 0px;
+    padding: 10px;
+}
+
+#message p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    line-height: 1.5;
+    padding: 0;
+    margin: 5px 0 10px 0;
+    background-color: #35424a;
+    color: #ffffff; 
+}
+
+#dash-content input[type='text'] {
+    border: none;
+    border-bottom: 1px solid #35424a;
+    background: transparent;
+    outline: none;
+    height: 20px;
+    color: #35424a;
+    font-size: 16px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+#dash-content input[type='submit'] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #06fa94;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 20%;
+    margin-top: 0;
+}
+
+textarea{
+    margin: 0%;
+    padding: 10px;
+    width: 98%;
+    background-color: #ffffff;
+    color: #35424a;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
 #sidebar{
     width: 300px;
-    height: 500px;
+    height: 480px;
     background:#35424a;
     float: left;
     border-right: 3px solid #e8491d;
     color: #ffffff;
 }
 
+#sidebar h2 {
+    margin: 10px;
+    padding: 10px;
+    margin-bottom: 70px;
+}
+
+#sidebar-form {
+    margin: 30px 10px;
+    padding: 0;
+}
+
+#sidebar-form input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#sidebar-form input[type="text"], input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 20px;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+#sidebar input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #06fa94;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#sidebar input[type="submit"]:hover {
+    cursor: pointer;
+    background: #fb2525;
+    color: #000;
+}
+
 #data{
-    height: 500px;
+    height: 480px;
     background: #ffffff;
 }
 
@@ -175,13 +281,32 @@ header a:hover {
     margin-left: 10px;
 }
 
-ul li {
+/* ul li {
     padding: 20px;
-    border-bottom: 2px solid gray;
+    border: 2px solid gray;
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 7px;
+    border-radius: 10px;
+
 }
 ul li:hover {
     background: gray;
     color: white;
+} */
+
+#dash-data {
+    background-color: #35424a;
+    height: 480px;
+}
+
+#dash-content {
+    background-color: #35424a;
+    height: 480px;
+    width: 70%;
+    margin-left: 20%;
+    position: absolute;
+    left: -6%;
 }
 
 #output {
@@ -198,6 +323,6 @@ footer {
     background-color: #35424a;
     text-align: center;
     color: #ffffff;
-
+    height: 30px;
 }
 
