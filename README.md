@@ -18,7 +18,7 @@ These instructions will get you a copy of the project up and running on your loc
 Clone Repository
 
 * Copy repository link
-* git clone <Repository link>
+* git clone https://github.com/Dolapo47/Epic-Mail.git
 * cd Epic-Mail
 * npm install
 * npm start
