@@ -168,6 +168,7 @@ header a:hover {
     width: 70%;
     margin: 0px;
     padding: 10px;
+    height: 400px;
 }
 
 #message p {
@@ -176,8 +177,7 @@ header a:hover {
     line-height: 1.5;
     padding: 0;
     margin: 5px 0 10px 0;
-    background-color: #35424a;
-    color: #ffffff; 
+    color: #e8491d; 
 }
 
 #dash-content input[type='text'] {
@@ -207,7 +207,7 @@ header a:hover {
 textarea{
     margin: 0%;
     padding: 10px;
-    width: 98%;
+    width: 96%;
     background-color: #ffffff;
     color: #35424a;
     border-radius: 5px;
@@ -281,20 +281,6 @@ textarea{
     margin-left: 10px;
 }
 
-/* ul li {
-    padding: 20px;
-    border: 2px solid gray;
-    width: 80%;
-    margin-top: 10px;
-    margin-left: 7px;
-    border-radius: 10px;
-
-}
-ul li:hover {
-    background: gray;
-    color: white;
-} */
-
 #dash-data {
     background-color: #35424a;
     height: 480px;
@@ -326,3 +312,42 @@ footer {
     height: 30px;
 }
 
+/* Media Queries */
+@media(max-width: 768px){
+    header #branding, 
+    header nav,
+    header nav li {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header {
+        padding-bottom: 20px;
+    }
+
+    .loginbox {
+        background: #35424a;
+        margin: 19.5px 20px;
+        border: 1px solid black;
+        height: 420px;
+        width: 50%;
+        padding: 10px 10px;
+        color: #ffffff;
+        margin-left: 25%;
+    }
+
+    #adminlogo {
+        float: none;
+        margin-top: 10px;
+        margin-left: 42%;
+    }
+
+    textarea {
+        width: 92%;
+    }
+
+    #message p {
+        font-size: 24px;
+    }
+}
