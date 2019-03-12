@@ -4,10 +4,16 @@ body {
     line-height: 1.5;
     padding: 0;
     margin: 0;
+    height: 100%;
     background-color: #f4f4f4;
 }
 
-/* Global */
+#container {
+    min-height: 100%;
+    position: relative;
+}
+
+
 .container {
     width: 80%;
     margin: auto;
@@ -90,8 +96,8 @@ header a:hover {
     background: #35424a;
     margin: 19.5px 20px;
     border: 1px solid black;
-    height: 420px;
-    width: 400px;
+    height: 100%;
+    width: 30%;
     padding: 10px 10px;
     color: #ffffff;
     margin-left: 33%;
@@ -303,6 +309,9 @@ textarea{
 
 
 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     padding: 20px;
     border-top: #e8491d 3px solid;
     margin-top: 0px;
@@ -310,6 +319,10 @@ footer {
     text-align: center;
     color: #ffffff;
     height: 30px;
+}
+
+#container {
+    height: 100%;
 }
 
 /* Media Queries */
