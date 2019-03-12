@@ -180,6 +180,7 @@ header a:hover {
     margin: 0%;
     padding: 10px;
     height: 400px;
+    top: 7%;
 }
 
 #message p {
@@ -313,7 +314,32 @@ textarea{
     position: absolute;
     left: -6%;
 }
+table{
+    width: 100%;
+}
 
+table, th, td {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #e8491d;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #e8e8e8;
+}
+
+.delete-icon {
+    width: 20px;
+    height: 20px;
+}
 #output {
     height: 40px;
     margin: 0;
