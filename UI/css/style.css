@@ -34,13 +34,27 @@ ul{
     padding: 0;
 }
 
-.button_1{
-    height: 38px;
-    background: #e8491d;
-    border: 0;
-    padding: 0 20px;
+.h{
     color: #ffffff;
+}
 
+.button_1{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #06fa94;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.container h1 {
+    color: #ffffff;
+}
+
+.container p {
+    color: #ffffff;
 }
 
 .dark {
@@ -98,6 +112,7 @@ header a:hover {
     height: 100%;
 }
 
+
 .loginbox {
     background: #ffffff;
     margin: 19.5px 20px;
@@ -119,6 +134,7 @@ header a:hover {
     margin: 10px 0 20px 0;
     padding: 0;
     font-weight: lighter;
+    color: #e8491d;
 }
 
 .loginbox input{
@@ -157,6 +173,8 @@ header a:hover {
     font-size: 18px;
     border-radius: 5px;
 }
+
+
 
 .loginbox input[type="submit"]:hover {
     cursor: pointer;
