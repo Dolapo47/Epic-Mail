@@ -1,10 +1,8 @@
-/* eslint-disable no-plusplus */
 import express from 'express';
 import { messageDetails } from '../db/userDB';
 
 const router = express.Router();
 
-// eslint-disable-next-line consistent-return
 router.post('/messages', (req, res) => {
   const message = {
     id: String(messageDetails.length + 1),
@@ -15,7 +13,7 @@ router.post('/messages', (req, res) => {
     status: req.body.status,
   };
   messageDetails.push(message);
-  res.status(201).json({
+  return res.status(201).json({
     status: 201,
     data: message,
   });
@@ -25,6 +23,15 @@ router.get('/messages', (req, res) => {
   res.status(200).json({
     status: 200,
     messages: messageDetails,
+  });
+});
+
+
+router.get('/messages/new', (req, res) => {
+  const readMessages = messageDetails.filter(message => message.status === 'new');
+  res.status(200).json({
+    status: 200,
+    readMessages,
   });
 });
 
