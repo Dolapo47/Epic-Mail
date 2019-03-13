@@ -4,10 +4,16 @@ body {
     line-height: 1.5;
     padding: 0;
     margin: 0;
-    background-color: #f4f4f4;
+    height: 100%;
+    background-color: #35424a;
 }
 
-/* Global */
+#container {
+    min-height: 100%;
+    position: relative;
+}
+
+
 .container {
     width: 80%;
     margin: auto;
@@ -28,13 +34,27 @@ ul{
     padding: 0;
 }
 
-.button_1{
-    height: 38px;
-    background: #e8491d;
-    border: 0;
-    padding: 0 20px;
+.h{
     color: #ffffff;
+}
 
+.button_1{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #06fa94;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.container h1 {
+    color: #ffffff;
+}
+
+.container p {
+    color: #ffffff;
 }
 
 .dark {
@@ -86,12 +106,19 @@ header a:hover {
     font-weight: lighter;
 }
 
+.content-box {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
 .loginbox {
-    background: #35424a;
+    background: #ffffff;
     margin: 19.5px 20px;
     border: 1px solid black;
-    height: 420px;
-    width: 400px;
+    height: 100%;
+    width: 30%;
     padding: 10px 10px;
     color: #ffffff;
     margin-left: 33%;
@@ -107,6 +134,7 @@ header a:hover {
     margin: 10px 0 20px 0;
     padding: 0;
     font-weight: lighter;
+    color: #e8491d;
 }
 
 .loginbox input{
@@ -114,13 +142,24 @@ header a:hover {
     margin-bottom: 20px;
 }
 
-.loginbox input[type="text"], input[type="password"] {
+.loginbox input[type="text"] {
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #35424a;
     background: transparent;
     outline: none;
     height: 20px;
-    color: #fff;
+    color: #35424a;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.loginbox input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #35424a;
+    background: transparent;
+    outline: none;
+    height: 20px;
+    color: #35424a;
     font-size: 16px;
     margin-bottom: 40px;
 }
@@ -135,16 +174,7 @@ header a:hover {
     border-radius: 5px;
 }
 
-/* #button {
-    border: none;
-    outline: none;
-    height: 40px;
-    width: 100%;
-    background: #06fa94;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 5px;
-} */
+
 
 .loginbox input[type="submit"]:hover {
     cursor: pointer;
@@ -164,10 +194,11 @@ header a:hover {
     border-radius: 5px;
     left: 13%;
     background-color: #ffffff;
-    top: 7%;
     width: 70%;
-    margin: 0px;
+    margin: 0%;
     padding: 10px;
+    height: 400px;
+    top: 7%;
 }
 
 #message p {
@@ -176,8 +207,7 @@ header a:hover {
     line-height: 1.5;
     padding: 0;
     margin: 5px 0 10px 0;
-    background-color: #35424a;
-    color: #ffffff; 
+    color: #e8491d; 
 }
 
 #dash-content input[type='text'] {
@@ -207,7 +237,7 @@ header a:hover {
 textarea{
     margin: 0%;
     padding: 10px;
-    width: 98%;
+    width: 96%;
     background-color: #ffffff;
     color: #35424a;
     border-radius: 5px;
@@ -215,12 +245,25 @@ textarea{
     font-size: 16px;
 }
 
+#data {
+    box-sizing: border-box;
+    background: 1px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
 #sidebar{
+    box-sizing: border-box;
     width: 300px;
-    height: 480px;
+    height: 100%;
     background:#35424a;
-    float: left;
-    border-right: 3px solid #e8491d;
     color: #ffffff;
 }
 
@@ -267,11 +310,6 @@ textarea{
     color: #000;
 }
 
-#data{
-    height: 480px;
-    background: #ffffff;
-}
-
 #adminlogo{
     background: white;
     border-radius: 50px;
@@ -281,34 +319,45 @@ textarea{
     margin-left: 10px;
 }
 
-/* ul li {
-    padding: 20px;
-    border: 2px solid gray;
-    width: 80%;
-    margin-top: 10px;
-    margin-left: 7px;
-    border-radius: 10px;
-
-}
-ul li:hover {
-    background: gray;
-    color: white;
-} */
-
 #dash-data {
     background-color: #35424a;
-    height: 480px;
+    height: 100%;
 }
 
 #dash-content {
     background-color: #35424a;
-    height: 480px;
+    height: 100%;
     width: 70%;
     margin-left: 20%;
     position: absolute;
     left: -6%;
 }
+table{
+    width: 100%;
+}
 
+table, th, td {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #e8491d;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #e8e8e8;
+}
+
+.delete-icon {
+    width: 20px;
+    height: 20px;
+}
 #output {
     height: 40px;
     margin: 0;
@@ -317,6 +366,9 @@ ul li:hover {
 
 
 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     padding: 20px;
     border-top: #e8491d 3px solid;
     margin-top: 0px;
@@ -326,3 +378,46 @@ footer {
     height: 30px;
 }
 
+#container {
+    height: 100%;
+}
+
+/* Media Queries */
+@media(max-width: 768px){
+    header #branding, 
+    header nav,
+    header nav li {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header {
+        padding-bottom: 20px;
+    }
+
+    .loginbox {
+        background: #35424a;
+        margin: 19.5px 20px;
+        border: 1px solid black;
+        height: 420px;
+        width: 50%;
+        padding: 10px 10px;
+        color: #ffffff;
+        margin-left: 25%;
+    }
+
+    #adminlogo {
+        float: none;
+        margin-top: 10px;
+        margin-left: 42%;
+    }
+
+    textarea {
+        width: 92%;
+    }
+
+    #message p {
+        font-size: 24px;
+    }
+}
