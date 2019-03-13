@@ -12,6 +12,7 @@ describe('Epic Mail RESTful API test', () => {
       .expect('Content-Type', /json/)
       .end((err, res) => {
         expect(res.statusCode).to.equal(200);
+        expect(res.body).to.be.an('Object');
       });
     done();
   });
@@ -23,6 +24,7 @@ describe('Epic Mail RESTful API test', () => {
       .expect('Content-Type', /json/)
       .end((err, res) => {
         expect(res.statusCode).to.equal(200);
+        expect(res.body).to.be.an('Object');
       });
     done();
   });
@@ -34,6 +36,7 @@ describe('Epic Mail RESTful API test', () => {
       .expect('Content-Type', /json/)
       .end((err, res) => {
         expect(res.statusCode).to.equal(200);
+        expect(res.body).to.be.an('Object');
       });
     done();
   });
@@ -45,6 +48,7 @@ describe('Epic Mail RESTful API test', () => {
       .expect('Content-Type', /json/)
       .end((err, res) => {
         expect(res.statusCode).to.equal(200);
+        expect(res.body).to.be.an('Object');
       });
     done();
   });

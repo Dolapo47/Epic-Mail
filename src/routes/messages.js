@@ -1,10 +1,8 @@
-/* eslint-disable no-plusplus */
 import express from 'express';
 import { messageDetails } from '../db/userDB';
 
 const router = express.Router();
 
-// eslint-disable-next-line consistent-return
 router.post('/messages', (req, res) => {
   const message = {
     id: String(messageDetails.length + 1),
