@@ -15,7 +15,7 @@ router.post('/messages', (req, res) => {
     status: req.body.status,
   };
   messageDetails.push(message);
-  res.status(201).json({
+  return res.status(201).json({
     status: 201,
     data: message,
   });
@@ -25,6 +25,15 @@ router.get('/messages', (req, res) => {
   res.status(200).json({
     status: 200,
     messages: messageDetails,
+  });
+});
+
+
+router.get('/messages/new', (req, res) => {
+  const readMessages = messageDetails.filter(message => message.status === 'new');
+  res.status(200).json({
+    status: 200,
+    readMessages,
   });
 });
 
