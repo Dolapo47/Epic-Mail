@@ -2,6 +2,9 @@ language: node_js
 node_js:
   - stable
   - "10.15.1"
+
+env:
+  global: CODECLIMATE_REPO_TOKEN=80ab3de5854d246057144e9802b175df48ddc63dc31561b1254856a29ad32a8a
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
