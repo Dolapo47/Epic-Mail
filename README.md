@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Dolapo47/Epic-Mail.svg?branch=develop)](https://travis-ci.com/Dolapo47/Epic-Mail)
+
 # Epic-Mail
 A simple mailing system
 
@@ -30,8 +32,6 @@ Clone Repository
 3. Javascript.
 4. Nodejs
 5. Expressjs
-
-[![Build Status](https://travis-ci.com/Dolapo47/Epic-Mail.svg?branch=develop)](https://travis-ci.com/Dolapo47/Epic-Mail)
 
 ### Contributors
 
