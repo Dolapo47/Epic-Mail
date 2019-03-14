@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/Dolapo47/Epic-Mail.svg?branch=develop)](https://travis-ci.com/Dolapo47/Epic-Mail)
+[![Maintainability](https://api.codeclimate.com/v1/badges/9f19c35e15c1baa1d6e9/maintainability)](https://codeclimate.com/github/Dolapo47/Epic-Mail/maintainability)
 
 # Epic-Mail
 A simple mailing system
