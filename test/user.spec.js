@@ -18,7 +18,7 @@ describe('Epic Mail RESTful API test', () => {
       .send(user)
       .end((err, res) => {
         expect(res.body).to.be.an('Object');
-        expect(res.statusCode).to.equal(201);
+        expect(res.body).to.haveOwnProperty('status').to.be.equal(201);
       });
     done();
   });
