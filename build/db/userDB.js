@@ -21,5 +21,12 @@ var messageDetails = [{
   message: 'this is Epic mail app for andela',
   parentMessageId: '1',
   status: 'sent'
+}, {
+  id: '1',
+  createdOn: new Date(),
+  subject: 'Epic mail app',
+  message: 'this is Epic mail app for andela',
+  parentMessageId: '1',
+  status: 'sent'
 }];
 exports.messageDetails = messageDetails;

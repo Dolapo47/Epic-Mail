@@ -6,7 +6,7 @@ var _app = _interopRequireDefault(require("./app"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var port = 6000;
+var port = process.env.PORT || 6000;
 
 var server = _http.default.createServer(_app.default);
 
