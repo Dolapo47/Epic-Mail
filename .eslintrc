@@ -9,7 +9,6 @@
         "es6": true,
         "mocha": true
     },
-    "options": { "treatUndefinedAsUnspecified": false },
     "rules":{
         "linebreak-style": 0,
         "comma-dangle": "warn",
