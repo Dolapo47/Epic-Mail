@@ -13,7 +13,7 @@
     "coveralls-coverage": "coveralls < lcov.info",
     "codeclimate-coverage": "codeclimate-test-reporter < lcov.info",
     "coverage": "nyc npm run test && npm run generate-lcov && npm run coveralls-coverage && npm run codeclimate-coverage",
-    "heroku-postbuild":" echo skip-postbuild"
+    "heroku-postbuild": " echo skip-postbuild"
   },
   "repository": {
     "type": "git",
@@ -37,6 +37,7 @@
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.3.4",
     "@babel/register": "^7.0.0",
+    "bcrypt": "^3.0.4",
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
     "codeclimate-test-reporter": "^0.5.1",
