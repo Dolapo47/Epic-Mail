@@ -1,8 +1,8 @@
 import http from 'http';
 import app from './app';
 
-const port = process.env.PORT || 6000;
+const port = 6000;
 
 const server = http.createServer(app);
 
-server.listen(port);
+server.listen(port, console.log('Server is running'));
