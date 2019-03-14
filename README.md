@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.com/Dolapo47/Epic-Mail.svg?branch=develop)](https://travis-ci.com/Dolapo47/Epic-Mail)
 [![Maintainability](https://api.codeclimate.com/v1/badges/9f19c35e15c1baa1d6e9/maintainability)](https://codeclimate.com/github/Dolapo47/Epic-Mail/maintainability)
 [![Coverage Status](https://coveralls.io/repos/github/Dolapo47/Epic-Mail/badge.svg?branch=develop)](https://coveralls.io/github/Dolapo47/Epic-Mail?branch=develop)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/9f19c35e15c1baa1d6e9/test_coverage)](https://codeclimate.com/github/Dolapo47/Epic-Mail/test_cover
+[![Test Coverage](https://api.codeclimate.com/v1/badges/9f19c35e15c1baa1d6e9/test_coverage)](https://codeclimate.com/github/Dolapo47/Epic-Mail/test_coverage)
 
 # Epic-Mail
 A simple mailing system
