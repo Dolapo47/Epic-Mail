@@ -16,7 +16,7 @@ These instructions will get you a copy of the project up and running on your loc
 * Git
 
 ### Template URL
-* (https://dolapo47.github.io/Epic-Mail/UI/html/signin.html)
+* (https://dolapo47.github.io/Epic-Mail/UI/html/index.html)
 
 ### Routes
 * POST (https://epic-mail-dolapo.herokuapp.com/api/v1/auth/signup) - Register Users
