@@ -1,7 +1,10 @@
 import express from 'express';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
+import dotenv from 'dotenv';
 import { userDetails } from '../db/userDB';
+
+dotenv.config();
 
 const router = express.Router();
 
@@ -51,7 +54,7 @@ router.post('/signup', (req, res) => {
   userDetails.push(user);
   // eslint-disable-next-line no-unreachable
   const token = jwt.sign({ id: user.id }, 'dolapo', {
-    expiresIn: 86400, // expires in 24 hours
+    expiresIn: 86400,
   });
   res.status(201).json({
     status: 201,
@@ -67,7 +70,7 @@ router.post('/signin', (req, res) => {
         return res.status(401).json({ auth: false, token: null });
       }
       const token = jwt.sign({ email: user.email }, 'dolapo', {
-        expiresIn: 86400, // expires in 24 hours
+        expiresIn: 86400,
       });
       res.status(200).json({ auth: true, token });
     }
