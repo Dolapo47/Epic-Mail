@@ -16,7 +16,20 @@ These instructions will get you a copy of the project up and running on your loc
 * Git
 
 ### Template URL
-* (https://dolapo47.github.io/Epic-Mail/UI/html/signin.html)
+* (https://dolapo47.github.io/Epic-Mail/UI/html/index.html)
+
+### Routes
+* POST (https://epic-mail-dolapo.herokuapp.com/api/v1/auth/signup) - Register Users
+* POST (https://epic-mail-dolapo.herokuapp.com/api/v1/auth/signin) - Login Users
+* POST (https://epic-mail-dolapo.herokuapp.com/api/v1/messages) - Create Messages
+* GET (https://epic-mail-dolapo.herokuapp.com/api/v1/messages) - Get all messages
+* GET (https://epic-mail-dolapo.herokuapp.com/api/v1/messages/sent) - Get sent messages
+* GET (https://epic-mail-dolapo.herokuapp.com/api/v1/messages/new) - Get unread messages
+* GET (https://epic-mail-dolapo.herokuapp.com/api/v1/messages/id) - Get message
+* DELETE (https://epic-mail-dolapo.herokuapp.com/api/v1/messages/id) - Delete message
+
+### Testing
+run 'npm test' on the terminal
 
 ### How to get a copy on local machine
 
