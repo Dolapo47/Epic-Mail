@@ -23,7 +23,7 @@ describe('Epic Mail RESTful API test', () => {
     done();
   });
 
-  it('create an object of a user', (done) => {
+  it('create an object of a user signin', (done) => {
     const user = {
       email: 'dolapo@g.com',
       password: 'dolapo',

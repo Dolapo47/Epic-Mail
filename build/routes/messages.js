@@ -27,13 +27,15 @@ router.post('/messages', function (req, res) {
 
   return res.status(201).json({
     status: 201,
-    data: message
+    data: message,
+    success: true
   });
 });
 router.get('/messages', function (req, res) {
   res.status(200).json({
     status: 200,
-    messages: _userDB.messageDetails
+    data: _userDB.messageDetails,
+    success: true
   });
 });
 router.get('/messages/new', function (req, res) {
@@ -43,7 +45,8 @@ router.get('/messages/new', function (req, res) {
 
   res.status(200).json({
     status: 200,
-    readMessages: readMessages
+    data: readMessages,
+    success: true
   });
 });
 router.get('/messages/sent', function (req, res) {
@@ -53,7 +56,8 @@ router.get('/messages/sent', function (req, res) {
 
   res.status(200).json({
     status: 200,
-    readMessages: readMessages
+    data: readMessages,
+    success: true
   });
 });
 router.get('/messages/:id', function (req, res) {
@@ -70,8 +74,10 @@ router.get('/messages/:id', function (req, res) {
     });
   } else {
     res.status(200).json({
+      message: 'Message successfully retrieved',
       status: 200,
-      messageId: messageId
+      data: messageId,
+      success: true
     });
   }
 });
@@ -93,7 +99,8 @@ router.delete('/messages/:id', function (req, res) {
     });
   } else {
     res.status(202).json({
-      message: "Message ".concat(id, " deleted")
+      message: "Message ".concat(id, " deleted"),
+      success: true
     });
   }
 });

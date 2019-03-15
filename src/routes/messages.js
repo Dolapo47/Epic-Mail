@@ -16,13 +16,15 @@ router.post('/messages', (req, res) => {
   return res.status(201).json({
     status: 201,
     data: message,
+    success: true,
   });
 });
 
 router.get('/messages', (req, res) => {
   res.status(200).json({
     status: 200,
-    messages: messageDetails,
+    data: messageDetails,
+    success: true,
   });
 });
 
@@ -31,7 +33,8 @@ router.get('/messages/new', (req, res) => {
   const readMessages = messageDetails.filter(message => message.status === 'new');
   res.status(200).json({
     status: 200,
-    readMessages,
+    data: readMessages,
+    success: true,
   });
 });
 
@@ -39,7 +42,8 @@ router.get('/messages/sent', (req, res) => {
   const readMessages = messageDetails.filter(message => message.status === 'sent');
   res.status(200).json({
     status: 200,
-    readMessages,
+    data: readMessages,
+    success: true,
   });
 });
 
@@ -53,8 +57,10 @@ router.get('/messages/:id', (req, res) => {
     });
   } else {
     res.status(200).json({
+      message: 'Message successfully retrieved',
       status: 200,
-      messageId,
+      data: messageId,
+      success: true,
     });
   }
 });
@@ -72,7 +78,9 @@ router.delete('/messages/:id', (req, res) => {
   } else {
     res.status(202).json({
       message: `Message ${id} deleted`,
+      success: true,
     });
   }
 });
+
 export default router;

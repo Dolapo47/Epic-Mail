@@ -21,6 +21,34 @@ var router = _express.default.Router(); // eslint-disable-next-line consistent-r
 router.post('/signup', function (req, res) {
   var hashedPassword = _bcryptjs.default.hashSync(req.body.password, 8);
 
+  if (!req.body.email) {
+    return res.status(400).json({
+      success: false,
+      message: 'title required'
+    });
+  }
+
+  if (!req.body.firstName) {
+    return res.status(400).json({
+      success: false,
+      message: 'First Name required'
+    });
+  }
+
+  if (!req.body.lastName) {
+    return res.status(400).json({
+      success: false,
+      message: 'Last name required'
+    });
+  }
+
+  if (!req.body.password) {
+    return res.status(400).json({
+      success: false,
+      message: 'password required'
+    });
+  }
+
   var user = {
     id: _userDB.userDetails.length + 1,
     email: req.body.email,

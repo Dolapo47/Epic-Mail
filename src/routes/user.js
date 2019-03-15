@@ -8,6 +8,30 @@ const router = express.Router();
 // eslint-disable-next-line consistent-return
 router.post('/signup', (req, res) => {
   const hashedPassword = bcrypt.hashSync(req.body.password, 8);
+  if (!req.body.email) {
+    return res.status(400).json({
+      success: false,
+      message: 'title required',
+    });
+  }
+  if (!req.body.firstName) {
+    return res.status(400).json({
+      success: false,
+      message: 'First Name required',
+    });
+  }
+  if (!req.body.lastName) {
+    return res.status(400).json({
+      success: false,
+      message: 'Last name required',
+    });
+  }
+  if (!req.body.password) {
+    return res.status(400).json({
+      success: false,
+      message: 'password required',
+    });
+  }
   const user = {
     id: userDetails.length + 1,
     email: req.body.email,
