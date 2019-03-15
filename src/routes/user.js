@@ -48,6 +48,7 @@ router.post('/signup', (req, res) => {
   res.status(201).json({
     status: 201,
     data: [user, { auth: true, token }],
+    success: true,
   });
 });
 
@@ -61,7 +62,11 @@ router.post('/signin', (req, res) => {
       const token = jwt.sign({ email: user.email }, 'dolapo', {
         expiresIn: 86400,
       });
-      res.status(200).json({ auth: true, token });
+      res.status(200).json({
+        auth: true,
+        token,
+        success: true,
+      });
     }
     return user;
   });

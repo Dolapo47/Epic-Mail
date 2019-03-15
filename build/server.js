@@ -10,4 +10,4 @@ var port = process.env.PORT || 6000;
 
 var server = _http.default.createServer(_app.default);
 
-server.listen(port, console.log('Server is running'));
+server.listen(port);

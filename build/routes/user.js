@@ -71,7 +71,8 @@ router.post('/signup', function (req, res) {
     data: [user, {
       auth: true,
       token: token
-    }]
+    }],
+    success: true
   });
 });
 router.post('/signin', function (req, res) {
@@ -94,7 +95,8 @@ router.post('/signin', function (req, res) {
 
       res.status(200).json({
         auth: true,
-        token: token
+        token: token,
+        success: true
       });
     }
 
