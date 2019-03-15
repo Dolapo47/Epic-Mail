@@ -103,5 +103,11 @@ router.post('/signin', function (req, res) {
     return user;
   });
 });
+router.get('/', function (req, res) {
+  res.status(200).json({
+    message: 'Welcome to Epic Mail',
+    success: true
+  });
+});
 var _default = router;
 exports.default = _default;
