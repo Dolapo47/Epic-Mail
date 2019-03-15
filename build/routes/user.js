@@ -11,9 +11,13 @@ var _jsonwebtoken = _interopRequireDefault(require("jsonwebtoken"));
 
 var _bcryptjs = _interopRequireDefault(require("bcryptjs"));
 
+var _dotenv = _interopRequireDefault(require("dotenv"));
+
 var _userDB = require("../db/userDB");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_dotenv.default.config();
 
 var router = _express.default.Router(); // eslint-disable-next-line consistent-return
 
@@ -62,7 +66,7 @@ router.post('/signup', function (req, res) {
 
   var token = _jsonwebtoken.default.sign({
     id: user.id
-  }, 'dolapo', {
+  }, process.env.SECRET, {
     expiresIn: 86400
   });
 
@@ -89,7 +93,7 @@ router.post('/signin', function (req, res) {
 
       var token = _jsonwebtoken.default.sign({
         email: user.email
-      }, 'dolapo', {
+      }, process.env.SECRET, {
         expiresIn: 86400
       });
 

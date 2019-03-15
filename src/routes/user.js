@@ -1,7 +1,10 @@
 import express from 'express';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
+import dotenv from 'dotenv';
 import { userDetails } from '../db/userDB';
+
+dotenv.config();
 
 const router = express.Router();
 
@@ -42,7 +45,7 @@ router.post('/signup', (req, res) => {
   };
 
   userDetails.push(user);
-  const token = jwt.sign({ id: user.id }, 'dolapo', {
+  const token = jwt.sign({ id: user.id }, process.env.SECRET, {
     expiresIn: 86400,
   });
   res.status(201).json({
@@ -59,7 +62,7 @@ router.post('/signin', (req, res) => {
       if (!passwordIsValid) {
         return res.status(401).json({ auth: false, token: null });
       }
-      const token = jwt.sign({ email: user.email }, 'dolapo', {
+      const token = jwt.sign({ email: user.email }, process.env.SECRET, {
         expiresIn: 86400,
       });
       res.status(200).json({
