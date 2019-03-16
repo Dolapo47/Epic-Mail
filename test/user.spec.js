@@ -37,4 +37,12 @@ describe('Epic Mail RESTful API test', () => {
       });
     done();
   });
+  it('create an object for a welcome', (done) => {
+    request(app)
+      .get('api/v1/')
+      .end((err, res) => {
+        expect(res.statusCode).to.equal(200);
+      });
+    done();
+  });
 });
