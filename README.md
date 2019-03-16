@@ -49,6 +49,11 @@ Clone Repository
 4. Nodejs
 5. Expressjs
 
+### Acknowledgement
+* Academind (https://www.youtube.com/results?search_query=academind)
+* Travesry media (https://www.youtube.com/results?search_query=traversy+media)
+* Ayomide Adelakun (https://medium.com/@purposenigeria/build-a-restful-api-with-node-js-and-express-js-part-two-3d7a82b8e00)
+
 ### Contributors
 
 * Adedolapo Adeleye
