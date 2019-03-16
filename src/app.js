@@ -1,9 +1,12 @@
 import express from 'express';
+import morgan from 'morgan';
 import bodyParser from 'body-parser';
+
 import userRoutes from './routes/user';
 import messageRoutes from './routes/messages';
 
 const app = express();
+morgan.use('dev');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({

@@ -20,9 +20,9 @@ exports.createSignUp = function (req, res) {
 
   var user = {
     id: _userDB.userDetails.length + 1,
-    email: req.body.email,
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
+    email: req.body.email.trim(),
+    firstName: req.body.firstName.trim(),
+    lastName: req.body.lastName.trim(),
     password: hashedPassword,
     isAdmin: req.body.isAdmin
   };

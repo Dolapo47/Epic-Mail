@@ -13,17 +13,17 @@ exports.createSignUp = (req, res) => {
 
   const user = {
     id: userDetails.length + 1,
-    email: req.body.email,
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
+    email: req.body.email.trim(),
+    firstName: req.body.firstName.trim(),
+    lastName: req.body.lastName.trim(),
     password: hashedPassword,
     isAdmin: req.body.isAdmin,
   };
   const schema = joi.object().keys({
-    email: joi.string().trim().email().required(),
+    email: joi.string().email().required(),
     password: joi.string().min(5).max(10).required(),
-    firstName: joi.string().trim().max(20).required(),
-    lastName: joi.string().trim().max(20).required(),
+    firstName: joi.string().max(20).required(),
+    lastName: joi.string().max(20).required(),
     isAdmin: joi.boolean().required(),
   });
 
