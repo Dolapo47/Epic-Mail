@@ -6,7 +6,7 @@ import userRoutes from './routes/user';
 import messageRoutes from './routes/messages';
 
 const app = express();
-morgan.use('dev');
+morgan('dev');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({

@@ -28,16 +28,16 @@ exports.createSignUp = function (req, res) {
   };
 
   var schema = _joi.default.object().keys({
-    email: _joi.default.string().trim().email().required(),
+    email: _joi.default.string().email().required(),
     password: _joi.default.string().min(5).max(10).required(),
-    firstName: _joi.default.string().trim().max(20).required(),
-    lastName: _joi.default.string().trim().max(20).required(),
+    firstName: _joi.default.string().max(20).required(),
+    lastName: _joi.default.string().max(20).required(),
     isAdmin: _joi.default.boolean().required()
   });
 
   _joi.default.validate(req.body, schema, function (err, result) {
     if (err) {
-      res.send('error');
+      res.send('error in user input');
     }
 
     _userDB.userDetails.push(user);

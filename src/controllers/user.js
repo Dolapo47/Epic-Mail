@@ -29,7 +29,7 @@ exports.createSignUp = (req, res) => {
 
   joi.validate(req.body, schema, (err, result) => {
     if (err) {
-      res.send('error');
+      res.send('error in user input');
     }
     userDetails.push(user);
     const token = jwt.sign({ id: user.id }, process.env.SECRET, {
