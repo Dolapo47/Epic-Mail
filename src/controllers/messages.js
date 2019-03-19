@@ -1,4 +1,3 @@
-// import joi from 'joi';
 import { messageDetails } from '../db/userDB';
 
 class messagecontroller {

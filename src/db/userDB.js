@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/prefer-default-export
 export const userDetails = [
   {
     id: 1,
@@ -26,5 +25,13 @@ export const messageDetails = [
     message: 'this is Epic mail app for andela',
     parentMessageId: '1',
     status: 'sent',
+  },
+];
+
+export const groupDetails = [
+  {
+    id: '1',
+    name: 'Epic group',
+    role: 'admin',
   },
 ];
