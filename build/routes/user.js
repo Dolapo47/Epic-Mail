@@ -11,11 +11,10 @@ var _user = _interopRequireDefault(require("../controllers/user"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var router = _express.default.Router(); // eslint-disable-next-line consistent-return
+var router = _express.default.Router();
 
-
-router.post('/signup', _user.default.createSignUp);
-router.post('/signin', _user.default.createSignIn);
+router.post('/signup', _user.default.signUp);
+router.post('/signin', _user.default.signIn);
 router.get('/', _user.default.welcome);
 var _default = router;
 exports.default = _default;
