@@ -3,8 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.messageDetails = exports.userDetails = void 0;
-// eslint-disable-next-line import/prefer-default-export
+exports.groupDetails = exports.messageDetails = exports.userDetails = void 0;
 var userDetails = [{
   id: 1,
   email: 'Dolapo@epicmail.com',
@@ -30,3 +29,9 @@ var messageDetails = [{
   status: 'sent'
 }];
 exports.messageDetails = messageDetails;
+var groupDetails = [{
+  id: '1',
+  name: 'Epic group',
+  role: 'admin'
+}];
+exports.groupDetails = groupDetails;

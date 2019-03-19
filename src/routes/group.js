@@ -3,6 +3,7 @@ import groupController from '../controllers/group';
 
 const router = express.Router();
 
-router.post('/', groupController.createGroup);
+router.post('/group', groupController.createGroup);
+router.get('/group', groupController.fetchGroups);
 
 export default router;

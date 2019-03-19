@@ -8,9 +8,17 @@ class groupController {
       role: 'user',
     };
     groupDetails.push(group);
-    res.status(200).json({
+    res.status(201).json({
       status: 201,
       data: group,
+      success: true,
+    });
+  }
+
+  static fetchGroups(req, res) {
+    res.status(200).json({
+      status: 200,
+      data: groupDetails,
       success: true,
     });
   }

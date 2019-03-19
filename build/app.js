@@ -15,6 +15,8 @@ var _user = _interopRequireDefault(require("./routes/user"));
 
 var _messages = _interopRequireDefault(require("./routes/messages"));
 
+var _group = _interopRequireDefault(require("./routes/group"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = (0, _express.default)();
@@ -25,6 +27,7 @@ app.use(_bodyParser.default.urlencoded({
 }));
 app.use('/api/v1', _messages.default);
 app.use('/api/v1/auth', _user.default);
+app.use('/api/v1', _group.default);
 app.use(function (req, res, next) {
   var error = new Error('Not Found');
   error.status = 404;
