@@ -16,5 +16,6 @@ var router = _express.default.Router();
 router.post('/group', _group.default.createGroup);
 router.get('/group', _group.default.fetchGroups);
 router.get('/group/:id', _group.default.fetchGroup);
+router.delete('/group/:id', _group.default.deleteGroup);
 var _default = router;
 exports.default = _default;

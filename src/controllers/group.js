@@ -40,6 +40,24 @@ class groupController {
       });
     }
   }
+
+  static deleteGroup(req, res) {
+    const { id } = req.params;
+    const group = groupDetails.filter(groups => groups.id === id)[0];
+    const index = groupDetails.indexOf(group);
+    groupDetails.splice(index, 1);
+    if (!id) {
+      res.status(404).json({
+        success: false,
+        message: 'Group not found',
+      });
+    } else {
+      res.status(202).json({
+        message: `Group ${id} deleted`,
+        success: true,
+      });
+    }
+  }
 }
 
 export default groupController;
