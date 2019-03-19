@@ -22,6 +22,24 @@ class groupController {
       success: true,
     });
   }
+
+  static fetchGroup(req, res) {
+    const { id } = req.params;
+    const groupId = groupDetails.filter(group => group.id === id);
+    if (!id) {
+      res.status(404).json({
+        success: false,
+        message: 'Group not found',
+      });
+    } else {
+      res.status(200).json({
+        message: 'Group successfully retrieved',
+        status: 200,
+        data: groupId,
+        success: true,
+      });
+    }
+  }
 }
 
 export default groupController;
