@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 
 import userRoutes from './routes/user';
 import messageRoutes from './routes/messages';
+import groupRoutes from './routes/group';
 
 const app = express();
 morgan('dev');
@@ -15,7 +16,7 @@ app.use(bodyParser.urlencoded({
 
 app.use('/api/v1', messageRoutes);
 app.use('/api/v1/auth', userRoutes);
-
+app.use('/api/v1', groupRoutes);
 
 app.use((req, res, next) => {
   const error = new Error('Not Found');
