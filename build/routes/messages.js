@@ -13,7 +13,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var router = _express.default.Router();
 
-router.post('/messages', _messages.default.createNewMessage);
+router.post('/messages', _messages.default.createMessage);
 router.get('/messages', _messages.default.getMessage);
 router.get('/messages/unread', _messages.default.unreadMessages);
 router.get('/messages/sent', _messages.default.sentMessages);
