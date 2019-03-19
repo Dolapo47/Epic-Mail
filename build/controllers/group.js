@@ -46,6 +46,29 @@ function () {
         success: true
       });
     }
+  }, {
+    key: "fetchGroup",
+    value: function fetchGroup(req, res) {
+      var id = req.params.id;
+
+      var groupId = _userDB.groupDetails.filter(function (group) {
+        return group.id === id;
+      });
+
+      if (!id) {
+        res.status(404).json({
+          success: false,
+          message: 'Group not found'
+        });
+      } else {
+        res.status(200).json({
+          message: 'Group successfully retrieved',
+          status: 200,
+          data: groupId,
+          success: true
+        });
+      }
+    }
   }]);
 
   return groupController;
