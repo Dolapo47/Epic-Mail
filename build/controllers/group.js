@@ -69,6 +69,31 @@ function () {
         });
       }
     }
+  }, {
+    key: "deleteGroup",
+    value: function deleteGroup(req, res) {
+      var id = req.params.id;
+
+      var group = _userDB.groupDetails.filter(function (groups) {
+        return groups.id === id;
+      })[0];
+
+      var index = _userDB.groupDetails.indexOf(group);
+
+      _userDB.groupDetails.splice(index, 1);
+
+      if (!id) {
+        res.status(404).json({
+          success: false,
+          message: 'Group not found'
+        });
+      } else {
+        res.status(202).json({
+          message: "Group ".concat(id, " deleted"),
+          success: true
+        });
+      }
+    }
   }]);
 
   return groupController;
